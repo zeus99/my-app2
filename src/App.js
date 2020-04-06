@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
+import Course from  './components/Course';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+	
+  return  (
+    
+			  	 
+        <div className="row">
+         <Course name="ReactJs" time="30h" type="true" > React very Simple </Course>
+         <Course name="Angular 4x" time="55h" type="false"/>
+         <Course name ="NodeJS" time="35h" type="true"/>
+     
+         
+   
+      </div>
+         
   );
 }
 
