@@ -3,10 +3,18 @@ import Lesson from  './Lesson';
 
 class Course extends Component {
 
-
+	 ShowButtonFree() {
+	  const isFree = this.props.free;
+	  console.log("isFree",isFree);
+	  if (isFree===true) {
+	    return <div className="panel-footer">
+				                  		<button type="button" className="btn btn-warning">View</button>
+				                  	</div>;
+	  }
+	  
+	}
 
 	render() {
-
 	
 
 		  return (
@@ -20,6 +28,7 @@ class Course extends Component {
 				                  <div className="panel-body">
 				                  <p> {this.props.time} </p>
 				                  <p> {this.props.children} </p>
+				                 
 
 				                      <ul className="list-group">
 				                          <Lesson/>
@@ -27,10 +36,7 @@ class Course extends Component {
 				                            <Lesson> </Lesson>
 				                      </ul>
 				                  </div>
-				                
-				                  	<div className="panel-footer">
-				                  		<button type="button" class="btn btn-warning">View</button>
-				                  	</div>
+				                {this.ShowButtonFree()}
 				                  
 
 
